@@ -1,9 +1,12 @@
+/* styling using CSS */
+
 body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+   
 }
 header, footer {
     background-color: #333;
@@ -29,6 +32,7 @@ nav ul li a {
     color:white;
     text-decoration: none;
     font-weight: bold;
+    
 }
 nav ul li a:hover {
  text-decoration: underline;
@@ -39,6 +43,7 @@ section {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 h2 {
     color: #333;
@@ -51,8 +56,80 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #668fa8;
+}
+
+
+ /* Dark mode application */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+body.dark-mode header, body.dark-mode footer {
+    background-color: #222;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+body.dark-mode h1 {
+    color: white;
+}
+
+body.dark-mode h2 {
+    color: white;
+}
+body.dark-mode h3 {
+    color: white;
+}
+body.dark-mode section {
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode nav ul li a {
+    color: white;
+
+}
+body.dark-mode footer {
+    background-color: #222;
+    color: white;
+}
+body.dark-mode header, body.dark-mode footer .container {
+    background-color: #222;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+body.dark-mode button {
+    background-color: #222;
+    color: white;
+}
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Responsive design */
 @media only screen and (max-width: 600px) 
 {
 header, footer {
@@ -68,3 +145,25 @@ section {
     margin: 10px;
 }
 }
+
+/* Animation */
+.hidden-section {
+    display: none;
+    animation: fadeIn 1s;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.visible-section {
+    display: block;
+    animation: fadeOut 1s;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+ .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+ 
+
