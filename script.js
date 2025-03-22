@@ -12,20 +12,7 @@ if (localStorage.getItem("darkMode") === "true") {
   document.body.classList.add("dark-mode");
 }
 
-// filtering//
-document.querySelectorAll('.filter-btn').forEach(button => {
-  button.addEventListener('click', function() {
-    const category = this.getAttribute('data-category');
-    document.querySelectorAll('.project').forEach(project => {
-      const projectCategory = project.getAttribute('data-category');
-      if (category === 'all' || projectCategory === category) {
-        project.style.display = 'block';
-      } else {
-        project.style.display = 'none';
-      }
-    });
-  });
-});
+
 
 
 // addining more things//
